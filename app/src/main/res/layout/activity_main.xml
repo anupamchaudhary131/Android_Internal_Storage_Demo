@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/learnVern"
+        android:textSize="@dimen/txtSize"
+        android:textStyle="bold"
+        android:textColor="@color/saffron"
+        android:typeface="serif"
+        android:layout_marginBottom="@dimen/txtSize"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edtFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/layout"
+            android:layout_marginTop="@dimen/layout"
+            android:ems="10" >
+
+           <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/edtDataValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/edtFileName"
+            android:layout_margin="@dimen/layout"
+            android:ems="10" />
+
+
+        <TextView
+            android:id="@+id/txtFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edtFileName"
+            android:layout_alignBottom="@+id/edtFileName"
+            android:layout_alignParentLeft="true"
+            android:text="@string/fileName"
+            android:textSize="@dimen/layout"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp" />
+
+
+        <TextView
+            android:id="@+id/txtDataValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edtDataValues"
+            android:layout_alignBottom="@id/edtDataValues"
+            android:layout_alignParentLeft="true"
+            android:text="Data Value"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/layout"
+            android:layout_marginLeft="20dp" />
+
+
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/edtDataValues"
+            android:layout_below="@id/edtDataValues"
+            android:layout_marginLeft="@dimen/layout"
+            android:layout_marginTop="12dp"
+            android:text="Save"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:typeface="serif"
+            android:backgroundTint="@color/saffron" />
+
+
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnSave"
+            android:layout_below="@id/edtDataValues"
+            android:layout_alignBaseline="@id/btnSave"
+            android:text="@string/read"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textAllCaps="false"
+            android:typeface="serif"
+            android:layout_marginLeft="18dp"
+            android:backgroundTint="@color/saffron" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
